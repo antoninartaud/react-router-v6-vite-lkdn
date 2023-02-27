@@ -1,25 +1,22 @@
 import { Routes, Route } from 'react-router-dom';
-import logo from '../assets/red30-tech-logo.png';
 
+import Header from './Header';
 import Home from './Home';
 import Categories from './Categories';
+import About from './About';
 
 function App() {
   return (
     <div className='app'>
-      <header className='container'>
-        <img
-          className='logo'
-          src={logo}
-          alt='Red30 tech logo'
-          title='Red30 | Home'
-        />
-      </header>
-
+      <Header />
       <Routes>
         <Route
           path='/'
           element={<Home title='Welcome to Red30 Tech' />}
+        />
+        <Route
+          path='/about'
+          element={<About />}
         />
         <Route
           path='/categories'
