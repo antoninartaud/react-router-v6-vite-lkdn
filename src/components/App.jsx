@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Header from './Header';
 import Home from './Home';
 import Categories from './Categories';
+import Category from './Category';
 import About from './About';
 
 function App() {
@@ -21,7 +22,12 @@ function App() {
         <Route
           path='/categories'
           element={<Categories />}
-        />
+        >
+          <Route
+            path='category'
+            element={<Category />}
+          />
+        </Route>
       </Routes>
 
       <footer className='container'>
